@@ -30,15 +30,15 @@ Le module GD de PHP est également requis.
 2. Restreindre les permissions sur les fichiers :
 
 ```bash
-chown www-data:www-data -R /var/www/rica
-find /var/www/rica -type d -exec chmod 555 "{}" +
-find /var/www/rica -type f -exec chmod 444 "{}" +
-chmod u+w /var/www/rica/crons_log.txt
-chmod u+w /var/www/rica/logs
-chmod u+w /var/www/rica/dumps
-chmod u+w -R /var/www/rica/statistiques
-chmod u+w /var/www/rica/imports/joueurs.js.php
-chmod go-r /var/www/rica/php/SQL.php
+sudo chown www-data:www-data -R /var/www/rica
+sudo find /var/www/rica -type d -exec chmod 555 "{}" +
+sudo find /var/www/rica -type f -exec chmod 444 "{}" +
+sudo chmod u+w /var/www/rica/crons_log.txt
+sudo chmod u+w /var/www/rica/logs
+sudo chmod u+w /var/www/rica/dumps
+sudo chmod u+w -R /var/www/rica/statistiques
+sudo chmod u+w /var/www/rica/imports/joueurs.js.php
+sudo chmod go-r /var/www/rica/php/SQL.php
 ```
 
 3. Créer un utilisateur MariaDB "rica" avec le mot de passe de votre choix (`MOT_DE_PASSE` dans cet exemple).
@@ -68,7 +68,7 @@ echo "<VirtualHost *:80>
 	ServerName rica.DOMAINE.fr
 	DocumentRoot /var/www/rica
 	AddDefaultCharset ISO-8859-15
-</VirtualHost>" > /etc/apache2/sites-available/rica.conf
+</VirtualHost>" | sudo tee /etc/apache2/sites-available/rica.conf
 
 # Ajout aux sites activés
 sudo ln -s ../sites-available/rica.conf /etc/apache2/sites-enabled/rica.conf
