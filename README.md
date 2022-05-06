@@ -12,9 +12,9 @@ Développé initialement par Ziliev et hébergé à l'adresse https://rica.ovsa.
 
 ![Apercu](https://github.com/maressyl/RICA/raw/main/screenshots/Apercu_600.png)
 
-## Le mot de la fin
-
 *Sélection de captures d'écrans disponibles dans `screenshots`.*
+
+## Le mot de la fin
 
 > Bonjour à tous,
 > 
