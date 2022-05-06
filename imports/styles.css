@@ -1,0 +1,540 @@
+
+/* COULEURS PRINCIPALES */
+
+div#header, div#body, div#abstract, div#content, div.onglets * {
+	/* Fond premier plan */
+	background: #333333 url(../images/fond.png);
+	border: 1px solid #555555;
+	}
+
+table th, div.bilan, div.sujet {
+	/* Cellules Titres */
+	background: #666666 url(../images/Grille2.png);
+	color: #CCCCCC;
+	}
+
+table td {
+	/* Cellules Contenu */
+	background: #444444 url(../images/Grille2.png);
+	color: #AAAAAA;
+	}
+
+/* Mot + */
+span.clef			{ color: #FFFFFF; }
+span.attention		{ color: #BE8C14; font-weight: bold; }
+
+/* Clan - Fonds de page */
+body.Contrebande	{ background-color: #111A11; }
+body.Empire			{ background-color: #111525; }
+body.Neutre			{ background-color: #000000; }
+body.Rebellion		{ background-color: #251111; }
+
+/* Clan - Textes */
+span.Contrebande, td.Contrebande, th.Contrebande, option.Contrebande, a.Contrebande	{ color: #44BB44; }
+span.Empire, td.Empire, th.Empire, option.Empire, a.Empire	 						{ color: #3377CC; }
+span.Rebellion, td.Rebellion, th.Rebellion, option.Rebellion, a.Rebellion			{ color: #EE5555; }
+span.Neutre, td.Neutre, th.Neutre, option.Neutre, a.Neutre							{ color: #DDDDDD; }
+
+/* Clan - Bordures d'objets */
+img.Contrebande	{ background-color: #228822; }
+img.Empire		{ background-color: #115588; }
+img.Neutre		{ background-color: #AAAAAA; }
+img.Rebellion	{ background-color: #AA2222; }
+
+
+
+
+/* GENERAL */
+
+/* Parents */
+*	{ margin: 0; padding: 0; }
+html { overflow-y: scroll; }
+
+/* Balises courantes */
+a	{ text-decoration: none; color: #DDDDDD; }
+img	{ border: 0; vertical-align: middle; }
+body {
+	color: #888888;
+	font-family: 'DejaVu Sans', 'Bitstream Vera Sans', 'Verdana';
+	font-size: 0.75em;
+
+	-moz-text-size-adjust: none;
+	-webkit-text-size-adjust: none;
+	-ms-text-size-adjust: none;	
+}
+
+
+
+
+
+
+/* AGENCEMENT */
+
+div#header, div#body, div#abstract, div#content, div.dialogue, div.onglets {
+	/* Position et taille */
+	margin: auto;
+	width: 707px;
+	clear: both;
+	}
+
+div#header, div#body, div#abstract, div#content {
+	/* Marges blocs à contenu */
+	margin-bottom: 10px;
+	padding: 10px;
+	}
+
+div.dialogue {
+	/* Marges messages */
+	margin-bottom: 10px;
+	padding: 5px 10px;
+	}
+
+div.onglets {
+	/* Marges blocs à onglets */
+	margin-top: 20px;
+	margin-bottom: 2px;
+	}
+
+div#abstract { margin-top: 10px; }
+
+div#header p, div.aide {
+	/* Aide intégrée */
+	font-size: 11px;
+	margin-top: 10px;
+	text-align: justify;
+	}
+
+div.aide {
+	/* Aide sur les cartes et BBCode */
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: center;
+	}
+
+div.texte p {
+	/* Paragraphes pages full texte */
+	text-align: justify;
+	margin: 8px 0;
+	}
+
+a.chapitre {
+	/* Aide détaillée - titre de chapitre */
+	color: #BE8C14;
+	font-weight: bold;
+	padding-top: 10px;
+	}
+
+div.erreur {
+	/* Message d'erreur */
+	color: #AA2200;
+	border: 1px solid #661100;
+	background-color: #330500;
+	}
+
+div.confirmation {
+	/* Message de confirmation */
+	color: #009900;
+	border: 1px solid #006600;
+	background-color: #003300;
+	}
+
+/* Onglets */
+div.onglets * {
+	color: #AAAAAA;
+	padding: 2px 10px;
+	margin: 2px;
+	font-weight: bold;
+	cursor: pointer;
+	white-space: nowrap;
+	}
+div.onglets *.selection {
+	color: #BE8C14;
+	border-bottom: 1px solid #333333;
+	}
+div.onglets *.verrouille {
+	color: #555555;
+	cursor: not-allowed;
+	}
+
+/* Alignements */
+div#content, div.dialogue					{ text-align: center; }
+div#header, div#resume, div#body, div.onglets	{ text-align: left; }
+
+/* Pieds de pages */
+div#pied		{ color: #555555; text-align: center; margin-bottom: 10px; }
+div#pied a	{ color: #777777; }
+
+
+
+
+/* TABLEAUX */
+
+/* Généralités */
+table th	{
+	text-align: center;
+	font-weight: normal;
+	padding: 2px 4px;
+	}
+table td	{
+	text-align: center;
+	padding: 2px 4px;
+	}
+
+/* Spécificités Unités */
+table.unites			{ width: 100%; }
+
+/* Spécificités Bonus */
+table.bonus			{ margin: auto; }
+table.bonus td			{ width: 22px; height: 22px; }
+.bonus_02				{ background-color: #550000; }
+.bonus_01				{ background-color: #990000; }
+.bonus_11				{ background-color: #BB7733; }
+.bonus_10				{ background-color: #008800; }
+.bonus_20				{ background-color: #005500; }
+table.bonus td.vertical		{
+	font-size: 11px;
+	line-height: 10px;
+	}
+
+/* Spécificités Légende des bonus */
+table.legende		{ margin: auto; margin-top: 20px; }
+table.legende td	{ color: #FFFFFF; }
+
+/* Spécificités Statistiques */
+table.stats		{ margin: auto; }
+table.stats th.clan	{
+	width: 100px;
+	font-weight: bold;
+	}
+
+/* Spécificités VIP */
+table.vip		{ width: 100%; }
+
+
+
+
+/* RAPPORTS */
+
+table.rapport {
+	/* Tableau d'unités */
+	width: 100%;
+	margin-top: 15px;
+	margin-bottom: 15px;
+	}
+
+/* Largeurs de colonnes */
+table.rapport th.fixe	{ width: 15%; }
+table.rapport td.mini	{ width: 30px; }
+
+/* Tableau de passagers */
+table.rapportVIP		{ width: 100%; }
+table.rapportVIP th		{ width: 20%; }
+table.rapportVIP td		{ width: 80%; text-align: left; padding-left: 10px; }
+
+
+
+/* CARTES */
+
+div#carte {
+	/* Fond de carte */
+	position: relative;
+	background-image: url(../images/Case.png);
+	background-position: top left;
+	background-repeat: repeat;
+	margin-left: 1px;
+	margin-top: 1px;
+	}
+
+div#carte img {
+	/* Objet sur la carte */
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	padding: 1px;
+	cursor: pointer;
+	}
+
+div#carte div {
+	/* Coordonnée sur la carte */
+	position: absolute;
+	width: 35px;
+	height: 35px;
+	text-align: center;
+	margin: 1px;
+	line-height: 35px;
+	background-image: url(../images/Grille2.png);
+	}
+
+div#carte img.selection {
+	/* Objet selectionné */
+	border: 3px solid white;
+	margin-left: -3px;
+	margin-top: -3px;
+	z-index: 88;
+	}
+
+table#legende {
+	/* Tableau de légende */
+	width: 700px;
+	margin: auto;
+	margin-top: 20px;
+	margin-bottom: 10px;
+	}
+
+td.separateur {
+	background: none;
+	font-weight: bold;
+	padding-top: 10px;
+	border-bottom: 2px solid #AAAAAA;
+	}
+
+/* Légende de l'objet selectionné */
+table#legende tr.selection td 	{ background: #111111 url(../images/Grille2.png); }
+
+/* Colonnes spécifiques */
+table#legende td.puissance		{ text-align: right; min-width: 80px; }
+table#legende td.ceinture		{ width: 20px; cursor: pointer; font-weight: bold; }
+table#legende td.type			{ width: 45px; }
+
+/* Clans */
+table#legende td.Contrebande	{ width: 40px; background-color: #111A11; }
+table#legende td.Empire			{ width: 40px; background-color: #111525; }
+table#legende td.Neutre			{ width: 40px; background-color: #000000; }
+table#legende td.Rebellion		{ width: 40px; background-color: #251111; }
+
+/* TableSorter */
+table#legende th {
+	text-align: left;
+	font-weight: bold;
+	background-color: #222222;
+	background-image: url(../images/sort.png);
+	background-repeat: no-repeat;
+	background-position: right center;
+	margin-right: 10px;
+	cursor: pointer;
+	}
+table#legende th.headerSortUp	{ color: #FFCC00; background-image: url(../images/asc.png); }
+table#legende th.headerSortDown	{ color: #FFCC00; background-image: url(../images/desc.png); }
+
+/* Infobulle */
+#table_info, #legende_info {
+	position: absolute;
+	display: none;
+	background: #222222;
+	}
+#table_info td						{ white-space: nowrap; }
+#legende_info						{ width: 100px; }
+#legende_info th					{ font-weight: bold; }
+#table_info td, #legende_info th	{ display: block; margin: 1px; }
+
+
+
+
+/* RESULTATS DE RECHERCHE */
+
+div.reponse {
+	/* Bloc entier */
+	margin-left: 5px;
+	margin-top: 8px;
+	text-align: justify;
+	}
+
+div.auteur {
+	/* Méta données */
+	color: #666666;
+	width: 230px;
+	float: left;
+	}
+
+a.joint, div.noJoint {
+	/* Pièce jointe */
+	display: block;
+	float: left;
+	width: 7px;
+	height: 14px;
+	padding: 0 6px;
+	}
+a.joint		{ background: url(../images/joint.png) center center no-repeat; }
+div.noJoint	{ background: url(../images/noJoint.png) center center no-repeat; }
+
+/* Posté depuis la dernière connexion (Méta données) */
+.new		{ color: #BE8C14; }
+
+div.message {
+	/* Bloc de contenu */
+	margin-left: 250px;
+	}
+
+div.message div.titre, div#abstract div.titre {
+	/* Contenu - Titre */
+	cursor: pointer;
+	}
+
+dl dd {
+	/* Contenu - Donnée ordinaire */
+	list-style-type: circle;
+	margin-left: 28px;
+	}
+
+dl dt {
+	/* Contenu - Donnée matchant la recherche */
+	display: list-item;
+	list-style-type: disc;
+	margin-left: 28px;
+	}
+
+/* Contenu - Affichage ou non des données ordinaires */
+dl.ferme dd		{ display: none; }
+dl.ouvert dd	{ display: list-item; }
+
+/* Contenu - Mot matchant la recherche */
+span.surligne	{ color: #BE8C14; }
+
+
+
+
+/* SUGGESTIONS */
+
+/* Liste des sujets */
+table.conversations				{ width: 685px; }
+table.conversations .etat		{ width: 12%; }
+table.conversations .titre		{ width: 58%; }
+table.conversations .messages	{ width: 12%; }
+table.conversations .dernier	{ width: 18%; }
+table.conversations td.dernier	{ text-align: left; }
+div#conversations				{ overflow-y: scroll; }
+div#conversations.ouvert		{ max-height: 500px; }
+div#conversations.ferme			{ max-height: 100px; }
+
+div.derouler {
+	/* Bouton dérouler */
+	text-align: right;
+	margin: 5px;
+	cursor: pointer;
+	}
+
+div.toutlu {
+	/* Bouton marquer comme lus */
+	text-align: left;
+	margin: 5px;
+	cursor: pointer;
+	float: left;
+	}
+
+div.suggestion {
+	/* Message */
+	margin: 8px;
+	text-align: justify;
+	}
+
+div.suggestion span.nouveau {
+	/* Auteur nouveau message */
+	font-weight: bold;
+	}
+
+div.sujet {
+	/* Titre du sujet selectionné */
+	text-align: center;
+	font-weight: bold;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	}
+
+/* Types de sujets */
+td.Fait, td.Refusé, td.Important, td.Accepté, td.Sondage {
+	color: #BBBBBB;
+	}
+td.Fait			{ background-color: #116611; }
+td.Refusé		{ background-color: #661111; }
+td.Ajourné		{ background-color: #000000; }
+td.Important	{ background-color: #665511; }
+td.Sondage		{ background-color: #993388; }
+
+
+
+
+/* FORMULAIRES */
+
+/* Bouton JavaScript */
+form img { cursor: pointer; }
+
+input, textarea, select {
+	/* Coordination graphique */
+	font-size: 11px;
+	color: #888888;
+	margin: 2px;
+	padding: 1px;
+	border: 1px solid #444444;
+	background-color: #222222;
+	vertical-align: middle;
+	}
+
+input.submit
+	{
+	/* Bouton */
+	color: #888888;
+	font-family: "Lucida Sans Unicode";
+	cursor: pointer;
+	padding: 0 5px;
+	border: 2px solid;
+	border-color: #444444 #222222 #222222 #444444;
+	background-color: #333333;
+	}
+
+/* Options de select */
+option	{ padding-left: 7px; }
+optgroup	{
+	padding-left: 3px;
+	margin-top: 12px;
+	}
+
+/* Spécificités */
+select							{ width: 170px; }
+select#typeVIP					{ width: 250px; }
+select#secteur					{ width: 100px; }
+select#type						{ width: 130px; }
+textarea						{ height: 30px; width: 500px; }
+textarea#txt_discuter			{ height: 120px; }
+textarea#BBCode					{ height: 250px; width: 100%; }
+input#x, input#y, input#limite	{ width: 30px; }
+input#puissance					{ width: 90px; }
+input#titre						{ width: 240px; }
+input#titre_memo				{ width: 250px; }
+input#details					{ width: 400px; }
+input#nom						{ width: 120px; }
+input#numero					{ width: 45px; }
+input.date						{ width: 130px; text-align: center; }
+form#bonus						{ text-align: center; margin-bottom: 10px; }
+select#limite_type				{ width: 70px; }
+
+
+
+
+/* BLASON */
+
+a#blason {
+	width: 118px;
+	height: 23px;
+	display: block;
+	float: right;
+	padding-top: 37px;
+	padding-right: 45px;
+	color: #BE8C14;
+	font-weight: bold;
+	font-size: 14px;
+	background-position: top;
+	background-repeat: repeat-x;
+	text-align: center;
+	}
+
+a#blason.Empire			{ background-image: url(../images/Empire.gif); }
+a#blason.Rebellion		{ background-image: url(../images/Rebellion.gif); }
+a#blason.Contrebande	{ background-image: url(../images/Contrebande.gif); }
+
+
+
+
+/* RAFFINEMENTS */
+
+
+
