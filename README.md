@@ -1,14 +1,38 @@
 # Réseau de Renseignement Inter-Clan Automatisé (RICA)
 
+## Description
+
 RICA est une base de données inter-clan pour le jeu en ligne [SWING](https://www.ngswing.com).
 
 Son objectif est de fournir aux 3 clans du jeu (Rebellion, Empire et Contrebande) les mêmes services de collecte et analyse des rapports de combat, en compartimentant les informations collectées pour chaque clan.
 
 Développé initialement par Ziliev et hébergé à l'adresse https://rica.ovsa.fr, le réseau original a fermé ses portes le 4 mai 2022.
 
+## Apercu
+
 ![Apercu](https://github.com/maressyl/RICA/raw/main/screenshots/Apercu_600.png)
 
+## Le mot de la fin
+
 *Sélection de captures d'écrans disponibles dans `screenshots`.*
+
+> Bonjour à tous,
+> 
+> C'est avec tristesse que je vous annonce que ce "May the 4th" aura vu la fermeture du réseau RICA, ou en tout cas du serveur qui l'hébergeait jusqu'à présent.
+> 
+> Le code ayant assez mal vieilli, il présente un niveau de sécurité plus vraiment compatible avec les autres projets hébergés sur le même serveur. Le passage de PHP 7 à PHP 8 implique égelement quelques modifications du code auxquelles je n'ai malheureusement plus le temps de me consacrer.
+> 
+> Si quelqu'un souhaite reprendre le flambeau (ce que j'espère !), j'ai publié l'intégralité du code source et les explications de déploiement sur Github, dans le dépôt suivant (n’hésitez pas à ouvrir des « Issues » sur ce dépôt si vous rencontrez des problèmes) :
+> 
+> https://github.com/maressyl/RICA
+> 
+> Vous y trouverez également les dumps de la BDD RICA pour l’ensemble des parties de fin 2018 à ce jour, si jamais un historien devait passer par là.
+> 
+> Merci à tous pour cette belle aventure, je reconnais avec nostalgie les pseudos de nombreux irréductibles avec qui cela a été un plaisir de la partager il y a de quelques années de cela déjà, pour moi elle s’arrête ici.
+> 
+> 
+> Bon jeu, \
+> Ziliev
 
 # Installation
 
