@@ -6,6 +6,10 @@ Son objectif est de fournir aux 3 clans du jeu (Rebellion, Empire et Contrebande
 
 Développé initialement par Ziliev et hébergé à l'adresse https://rica.ovsa.fr, le réseau original a fermé ses portes le 4 mai 2022.
 
+![Apercu](https://github.com/maressyl/RICA/raw/main/screenshots/Apercu_600.png)
+
+*Sélection de captures d'écrans disponibles dans `screenshots`.*
+
 # Installation
 
 ## Mise en garde
