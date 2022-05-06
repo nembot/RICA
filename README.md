@@ -43,7 +43,7 @@ sudo chmod go-r /var/www/rica/php/SQL.php
 
 3. Créer un utilisateur MariaDB "rica" avec le mot de passe de votre choix (`MOT_DE_PASSE` dans cet exemple).
 
-4. Modifiez le mot de passe dans `php/SQL.php` ligne 8.
+4. Modifier le mot de passe dans `php/SQL.php` ligne 8.
 
 5. Créer une base de données MariaDB nommée "rica" :
 
