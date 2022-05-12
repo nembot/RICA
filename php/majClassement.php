@@ -50,15 +50,12 @@ function majClassement()
 	// Rustine si Kin refait le coup des joueurs en double
 	$Requete .= " ON DUPLICATE KEY UPDATE puissance=puissance";
 	
-	echo $Requete;
 
 	if ($Securite > 10 AND !$Stop)
 		{
 		/* Execution */
 		fonction("SQL", array("TRUNCATE TABLE classement",__LINE__,"EXE",__FILE__));
-		echo "a";
 		fonction("SQL", array($Requete,__LINE__,"EXE",__FILE__));	
-		echo "b";
 		
 		/* Conclusion */
 		echo "majClassement() : Mise à jour réussie\n";
