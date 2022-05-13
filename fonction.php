@@ -4,9 +4,9 @@ function fonction($Nom, $Arguments=array()) {
 	/* Require */
 	if (!function_exists($Nom)) {
 		if (file_exists("php/".$Nom.".php")) {
-			require("php/".$Nom.".php");
+			require_once("php/".$Nom.".php");
 		} else {
-			die("Fonction \"".$Nom."\" inconnue");
+			die("Fonction \"".$Nom."\" inconnue\n");
 		}
 	}
 	

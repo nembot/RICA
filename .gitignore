@@ -1,3 +1,5 @@
 dumps/*
 statistiques/*
-
+logs/*
+config/*
+imports/joueurs.js.php

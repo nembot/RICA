@@ -5,7 +5,8 @@ function SQL($Requete, $Ligne, $Option, $Fichier)
 	/* Connexion si besoin */
 	if (!isset($GLOBALS['MySQL']))
 		{
-		$GLOBALS['mysqli'] = mysqli_connect("localhost", "rica", 'MOT_DE_PASSE', "rica");
+		$config = require 'config/config.local.php';
+		$GLOBALS['mysqli'] = mysqli_connect($config['host'], $config['username'], $config['password'], $config['database']);
 		if (mysqli_connect_error()) {
 			die(mysqli_error($GLOBALS['mysqli']));
 		}
