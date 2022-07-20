@@ -48,7 +48,7 @@ if (isset($_SESSION['pseudo']))
 			
 				/* Body */
 				$Content .= "<div id=\"content\">";
-				if (isset($_GET['original']) AND $_SESSION['pseudo'] == "Ziliev")
+				if (isset($_GET['original']) AND $_SESSION['pseudo'] == "NeM")
 					{ $Content .= "<pre>".gzuncompress($Message['original'])."</pre>"; }
 				else { $Content .= gzuncompress($Message['joint']); }
 				$Content .= "</div>";
@@ -86,7 +86,7 @@ echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://
 
 		".$Content."
 
-		<div id=\"pied\">Réalisé par <a href=\"http://www.ovsa.fr\" title=\"Site de l'auteur\" target=\"_blank\">Ziliev</a> pour <a href=\"http://www.ngswing.com\" target=\"_blank\">Star Wars in New Generation</a>, sous licence <a href=\"http://creativecommons.org/licenses/by-nc/2.0/fr/\" target=\"_blank\">Creative Commons</a></div>
+		<div id=\"pied\">Réalisé par Ziliev et repris par Nem et Mythik pour <a href=\"http://www.ngswing.com\" target=\"_blank\">Star Wars in New Generation</a>, sous licence <a href=\"http://creativecommons.org/licenses/by-nc/2.0/fr/\" target=\"_blank\">Creative Commons</a></div>
 		
 	</body>
 </html>";
