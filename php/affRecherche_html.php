@@ -7,7 +7,7 @@ function affRecherche_html($Messages, $Mots)
 		{
 		$Sortie .= "\n\t\t\t<div class=\"reponse\">";
 
-		/* Méta données */
+		/* MÃ©ta donnÃ©es */
 		$Stamp = fonction("temps", array("TvS", $M['date']));
 		if ($_SESSION['connecte'] < $Stamp)	{ $Sortie .= "<div class=\"auteur new\">"; }
 		else								{ $Sortie .= "<div class=\"auteur\">"; }
@@ -17,12 +17,12 @@ function affRecherche_html($Messages, $Mots)
 
 		/* Contenu */
 		$Sortie .= "<div class=\"message\">";
-		$Elements = preg_split("#§#", $M['elements']);
+		$Elements = preg_split("#ï¿½#", $M['elements']);
 
 		/* Surligner */
 		$Surlignes = array();
 		if (count($Elements) == 1) { $E = 0; } else { $E = 1; }
-		while(isset($Elements[$E])) 
+		while(isset($Elements[$E]))
 			{
 			$Total = 0;
 			foreach($Mots as $Mot)
@@ -36,32 +36,32 @@ function affRecherche_html($Messages, $Mots)
 				}
 			$Surlignes[$E] = ($Total > 0);
 			$E++;
-			} 
-		
-		/* Pièce jointe */
+			}
+
+		/* Piï¿½ce jointe */
 		if ($M['isJoint'])
 			{
-			$Sortie .= "<a href='joint.php?E=".$M['IDe']."' class='joint' target='_blank' title='Afficher la pièce jointe'>";
+			$Sortie .= "<a href='joint.php?E=".$M['IDe']."' class='joint' target='_blank' title='Afficher la piÃ¨ce jointe'>";
 			$Sortie .= "</a>";
 			}
-		else { $Sortie .= "<div class='noJoint' title='Pas de pièce jointe'></div>"; }
-		
+		else { $Sortie .= "<div class='noJoint' title='Pas de piÃ¨ce jointe'></div>"; }
+
 		if (count($Elements) > 1)
 			{
 			/* Titre */
 			$Sortie .= "<div class=\"titre\" onClick=\"derouler('Mess".$M['IDe']."')\">".$Elements[0]."</div>";
 			$Sortie .= "<dl id=\"Mess".$M['IDe']."\" class=\"ferme\">";
-	
+
 			/* Date */
-			$Sortie .= "<dd>Ajouté le ".fonction("temps", array("TvD", $M['date'], "#Jc #N2 #Mc #A4 à #H2:#I2:#S2"))."</dd>";
-	
+			$Sortie .= "<dd>AjoutÃ© le ".fonction("temps", array("TvD", $M['date'], "#Jc #N2 #Mc #A4 Ã  #H2:#I2:#S2"))."</dd>";
+
 			/* Elements */
 			for( $N = 1 ; $N < count($Elements) ; $N ++ )
 				{
 				if ($Surlignes[$N])		{ $Sortie .= "<dt>".$Elements[$N]."</dt>"; }
 				else					{ $Sortie .= "<dd>".$Elements[$N]."</dd>"; }
 				}
-	
+
 			$Sortie .= "</dl>";
 			}
 		else	{ $Sortie .= $Elements[0]; }
@@ -69,7 +69,7 @@ function affRecherche_html($Messages, $Mots)
 
 		$Sortie .= "</div>";
 		}
-	
+
 	return $Sortie;
 	}
 

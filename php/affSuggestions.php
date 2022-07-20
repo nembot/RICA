@@ -3,7 +3,7 @@
 function affSuggestions()
 	{
 	$Sortie = "<div id=\"body\">";
-	
+
 	if (isset($_SESSION['pseudo']))
 		{
 		/* Conversations - Collecte */
@@ -24,11 +24,11 @@ function affSuggestions()
 				__LINE__,"TAB",__FILE__
 				)
 			);
-		
+
 		/* Sujet ouvert */
 		if (isset($_GET['C']) AND preg_match("#^[0-9]+$#", $_GET['C']))	{ $Sujet = $_GET['C']; }
 		else													{ $Sujet = FALSE; }
-	
+
 		/* Conversations - Mise en forme */
 		$Sortie .= "<table class=\"conversations\">";
 		$Sortie .= "<tr>";
@@ -38,37 +38,37 @@ function affSuggestions()
 		$Sortie .= "<th class=\"dernier\">Dernier message</th>";
 		$Sortie .= "</tr>";
 		$Sortie .= "</table>";
-		
+
 		if ($Sujet === FALSE) { $Sortie .= "<div id=\"conversations\" class=\"ouvert\">"; }
 		else                  { $Sortie .= "<div id=\"conversations\" class=\"ferme\">"; }
-		
+
 		$Sortie .= "<table class=\"conversations \">";
-		
+
 		/* Conversations - Affichage */
 		foreach($Conversations as $C)
 			{
 			$Sortie .= "<tr>";
 			$Sortie .= "<td class=\"etat ".$C['etat']."\">".$C['etat']."</td>";
 			$Sortie .= "<td class=\"titre\"><a href=\"index.php?P=suggestions&amp;C=".$C['IDc']."\">".$C['titre']."</a></td>";
-			
+
 			/* Nombre de messages */
 			$nbrNews = fonction("nonLus_sujet", array($C['messages']));
 			$Sortie .= "<td class=\"messages\">".$C['nbrMessages'];
 			if ($nbrNews > 0)	{ $Sortie .= " <span class=\"new\">(".$nbrNews.")</span>"; }
 			$Sortie .= "</td>";
-			
-			/* Date du plus récent */
+
+			/* Date du plus rÃ©cent */
 			$Stamp = fonction("temps", array("TvS", $C['last']));
 			$Sortie .= "<td class=\"dernier\">il y a ".fonction("interval", array($Stamp))."</td>";
-			
+
 			$Sortie .= "</tr>";
 			}
 		$Sortie .= "</table>";
 		$Sortie .= "</div>";
-		
+
 		$Sortie .= "<div onClick=\"toutlu()\" class=\"toutlu\">Marquer tous les sujets comme lus</div>";
-		$Sortie .= "<div onClick=\"derouler('conversations')\" class=\"derouler\">Dérouler / Enrouler la liste des sujets</div>";
-				
+		$Sortie .= "<div onClick=\"derouler('conversations')\" class=\"derouler\">DÃ©rouler / Enrouler la liste des sujets</div>";
+
 		if ($Sujet !== FALSE)
 			{
 			/* Messages - Collecte */
@@ -82,10 +82,10 @@ function affSuggestions()
 					__LINE__,"TAB",__FILE__
 					)
 				);
-			
+
 			/* Messages lus */
 			$News = fonction("nonLus_lecture", array($Messages));
-			
+
 			/* Messages - Affichage */
 			$Sortie .= "<div class=\"sujet\">".$Messages[0]['titre']."</div>";
 			foreach($Messages as $M)
@@ -105,9 +105,9 @@ function affSuggestions()
 			}
 		}
 	else { $GLOBALS['dialogues'][] = array("type" => "erreur", "message" => "Connectez vous pour consulter cette page"); }
-	
+
 	$Sortie .= "</div>";
-	
+
 	return $Sortie;
 	}
 

@@ -4,7 +4,7 @@ function affUnites()
 	{
 	$Unites = fonction("unites");
 	$Donnees = "";
-	
+
 	$Donnees .= "\n\t\t<div id=\"body\">";
 	$Donnees .= "\n\t\t\t<table class=\"unites\">";
 
@@ -16,7 +16,7 @@ function affUnites()
 	$Donnees .= "\n\t\t\t\t\t<th>Rech.</th>";
 	$Donnees .= "\n\t\t\t\t\t<th>Recrut.</th>";
 	$Donnees .= "\n\t\t\t\t\t<th>Vie</th>";
-	$Donnees .= "\n\t\t\t\t\t<th>Dégats</th>";
+	$Donnees .= "\n\t\t\t\t\t<th>DÃ©gats</th>";
 	$Donnees .= "\n\t\t\t\t</tr>";
 
 	$N = 1; while($N <= 18)
@@ -37,8 +37,8 @@ function affUnites()
 		$Donnees .= "\n\t\t\t\t\t<td>".$U['Puissance']."</td>";
 		$Donnees .= "\n\t\t\t\t\t<td>".$U['Recherche']."</td>";
 		$Donnees .= "\n\t\t\t\t\t<td>".$U['taux']."</td>";
-		$Donnees .= "\n\t\t\t\t\t<td>".$U['Vie-min']." à ".$U['Vie-max']." + ".$U['Vie-add']."</td>";
-		$Donnees .= "\n\t\t\t\t\t<td>".$U['Deg-min']." à ".$U['Deg-max']." + ".$U['Deg-add']."</td>";
+		$Donnees .= "\n\t\t\t\t\t<td>".$U['Vie-min']." Ã  ".$U['Vie-max']." + ".$U['Vie-add']."</td>";
+		$Donnees .= "\n\t\t\t\t\t<td>".$U['Deg-min']." Ã  ".$U['Deg-max']." + ".$U['Deg-add']."</td>";
 
 		$Donnees .= "\n\t\t\t\t</tr>";
 
@@ -46,7 +46,7 @@ function affUnites()
 		}
 	$Donnees .= "\n\t\t\t</table>";
 	$Donnees .= "\n\t\t</div>";
-	
+
 	return $Donnees;
 	}
 

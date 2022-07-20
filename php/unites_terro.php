@@ -157,10 +157,10 @@ function unites()
 			),
 		9  => array(
 			"N" => 9,
-			"E" => "Défenseurs TIE",
+			"E" => "DÃ©fenseurs TIE",
 			"R" => "X-Wings",
 			"C" => "Chasseur Manta",
-			"e" => "Défenseurs",
+			"e" => "DÃ©fenseurs",
 			"r" => "X Wings",
 			"c" => "Manta",
 			"T" => 1,
@@ -176,10 +176,10 @@ function unites()
 			),
 		10 => array(
 			"N" => 10,
-			"E" => "Cuirassés imperiaux",
+			"E" => "CuirassÃ©s imperiaux",
 			"R" => "Croiseurs de fret",
 			"C" => "Cargo YT-2550",
-			"e" => "Cuirassés",
+			"e" => "CuirassÃ©s",
 			"r" => "Frets",
 			"c" => "YT 2550",
 			"T" => 2,
@@ -195,11 +195,11 @@ function unites()
 			),
 		11 => array(
 			"N" => 11,
-			"E" => "Croiseurs légers carraques",
-			"R" => "Canonnières corelliennes",
+			"E" => "Croiseurs lÃ©gers carraques",
+			"R" => "CanonniÃ¨res corelliennes",
 			"C" => "Faucon Millenium",
 			"e" => "Carraques",
-			"r" => "Canonnières",
+			"r" => "CanonniÃ¨res",
 			"c" => "Faucons",
 			"T" => 2,
 			"Puissance" => 870,
@@ -215,7 +215,7 @@ function unites()
 		12 => array(
 			"N" => 12,
 			"E" => "Destroyers stellaires imperiaux",
-			"R" => "Frégates CC-7700",
+			"R" => "FrÃ©gates CC-7700",
 			"C" => "Dragon Hapien",
 			"e" => "DSI",
 			"r" => "CC 7700",
@@ -233,7 +233,7 @@ function unites()
 			),
 		13 => array(
 			"N" => 13,
-			"E" => "Frégates Lancier",
+			"E" => "FrÃ©gates Lancier",
 			"R" => "Croiseurs Mon Calamari",
 			"C" => "Torpilleur d'assaut XG-1",
 			"e" => "Lanciers",
@@ -253,7 +253,7 @@ function unites()
 		14 => array(
 			"N" => 14,
 			"E" => "Destroyers stellaires Victoire",
-			"R" => "Frégates Nebulon-B",
+			"R" => "FrÃ©gates Nebulon-B",
 			"C" => "R-41 Starchaser",
 			"e" => "DSV",
 			"r" => "Nebulon",
@@ -310,10 +310,10 @@ function unites()
 		17 => array(
 			"N" => 17,
 			"E" => "Destroyers stellaires Victoire 2",
-			"R" => "Frégates d'assaut",
+			"R" => "FrÃ©gates d'assaut",
 			"C" => "Corvette Maraudeur",
 			"e" => "DSV 2",
-			"r" => "Frégates",
+			"r" => "FrÃ©gates",
 			"c" => "Maraudeurs",
 			"T" => 4,
 			"Puissance" => 8500,
@@ -327,7 +327,7 @@ function unites()
 			"Deg-add" => 300
 			),
 		18 => array(
-			"N" => 18,			
+			"N" => 18,
 			"E" => "Super-destroyers stellaires",
 			"R" => "Croiseurs de guerre Bulwark",
 			"C" => "Vaisseau de combat droide",
@@ -346,7 +346,7 @@ function unites()
 			"Deg-add" => 100
 			)
 		);
-	
+
 	$N=1; while($N <= 18)
 		{
 		$Sortie[ $Sortie[$N]['E'] ] = $Sortie[$N];

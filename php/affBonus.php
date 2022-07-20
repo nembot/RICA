@@ -5,16 +5,16 @@ function affBonus()
 	$Brut = fonction("bonus");
 	$Unites = fonction("unites");
 	$Bonus = "";
-	
+
 	/* En-tete de page */
 	$Bonus .= "\n\t\t<div id=\"body\">";
-	
-	/* Mon clan si non renseigné */
+
+	/* Mon clan si non renseignÃ© */
 	if (isset($_POST['moi']))		{ $Moi = $_POST['moi']; }
 	else if (isset($_SESSION['clan']))	{ $Moi = $_SESSION['clan']; }
 	else							{ $Moi = "Empire"; }
-	
-	/* Son clan si non renseigné */
+
+	/* Son clan si non renseignÃ© */
 	if (isset($_POST['lui']))		{ $Lui = $_POST['lui']; }
 	else if (isset($_SESSION['clan']))
 		{
@@ -27,8 +27,8 @@ function affBonus()
 			}
 		}
 	else { $Lui = "Rebellion"; }
-	
-		/* Selected et vérification */
+
+		/* Selected et vÃ©rification */
 	switch($Moi)
 		{
 		case "Contrebande":	$Mc = " selected"; $Me = ""; $Mr = ""; $Mn = ""; break;
@@ -45,27 +45,27 @@ function affBonus()
 		case "Numero":          $Lc = ""; $Le = ""; $Lr = ""; $Lr = " selected"; break;
 		default:			die("Clan inconnu");
 		}
-	
+
 	/* Formulaire */
 	$Bonus .= "<form action=\"\" method=\"post\" id=\"bonus\">";
-	$Bonus .= "Une unité <select name=\"moi\">";
-	$Bonus .= "<option value=\"Contrebande\"".$Mc.">contrebandière";
-	$Bonus .= "<option value=\"Empire\"".$Me.">impériale";
+	$Bonus .= "Une unitÃ© <select name=\"moi\">";
+	$Bonus .= "<option value=\"Contrebande\"".$Mc.">contrebandiÃ¨re";
+	$Bonus .= "<option value=\"Empire\"".$Me.">impÃ©riale";
 	$Bonus .= "<option value=\"Rebellion\"".$Mr.">rebelle";
-	$Bonus .= "<option value=\"Numero\"".$Mn.">numérotée";
+	$Bonus .= "<option value=\"Numero\"".$Mn.">numÃ©rotÃ©e";
 	$Bonus .= "</select>";
-	$Bonus .= " attaque une unité <select name=\"lui\">";
-	$Bonus .= "<option value=\"Contrebande\"".$Lc.">contrebandière";
-	$Bonus .= "<option value=\"Empire\"".$Le.">impériale";
+	$Bonus .= " attaque une unitÃ© <select name=\"lui\">";
+	$Bonus .= "<option value=\"Contrebande\"".$Lc.">contrebandiÃ¨re";
+	$Bonus .= "<option value=\"Empire\"".$Le.">impÃ©riale";
 	$Bonus .= "<option value=\"Rebellion\"".$Lr.">rebelle";
-	$Bonus .= "<option value=\"Numero\"".$Ln.">numérotée";
+	$Bonus .= "<option value=\"Numero\"".$Ln.">numÃ©rotÃ©e";
 	$Bonus .= "</select>";
 	$Bonus .= "<input type=\"submit\" class=\"submit\" value=\"Actualiser\">";
 	$Bonus .= "</form>";
-	
+
 	/* En-tete de tableau */
 	$Bonus .= "\n\t\t\t<table class=\"bonus\">";
-	
+
 	/* Titres de colonnes */
 	$Bonus .= "\n\t\t\t\t<tr>\n\t\t\t\t\t<td></td>";
 	for($N=1;$N<=18;$N++)
@@ -77,7 +77,7 @@ function affBonus()
 		$Bonus .= "\n\t\t\t\t\t<td class=\"vertical ".$Lui."\">".$Unite."</td>";
 		}
 	$Bonus .= "\n\t\t\t\t</tr>";
-	
+
 	/* Ligne par ligne */
 	for($L=1;$L<=18;$L++)
 		{
@@ -95,15 +95,15 @@ function affBonus()
 			}
 		$Bonus .= "\n\t\t\t\t</tr>";
 		}
-	
+
 	/* Pied du tableau */
 	$Bonus .= "\n\t\t\t</table>";
-	
-	/* Légende */
+
+	/* Lï¿½gende */
 	$Bonus .= "\n\t\t\t<table class=\"legende\">";
-	$Bonus .= "\n\t\t\t\t<tr><td class=\"bonus_02\">Le défenseur a un double bonus</td></tr>";
-	$Bonus .= "\n\t\t\t\t<tr><td class=\"bonus_01\">Le défenseur a un bonus</td></tr>";
-	$Bonus .= "\n\t\t\t\t<tr><td class=\"bonus_11\">Bonus pour les 2 unités</td></tr>";
+	$Bonus .= "\n\t\t\t\t<tr><td class=\"bonus_02\">Le dÃ©fenseur a un double bonus</td></tr>";
+	$Bonus .= "\n\t\t\t\t<tr><td class=\"bonus_01\">Le dÃ©fenseur a un bonus</td></tr>";
+	$Bonus .= "\n\t\t\t\t<tr><td class=\"bonus_11\">Bonus pour les 2 unitÃ©s</td></tr>";
 	$Bonus .= "\n\t\t\t\t<tr><td class=\"bonus_10\">L'Attaquant a un bonus</td></tr>";
 	$Bonus .= "\n\t\t\t\t<tr><td class=\"bonus_20\">L'Attaquant a un double bonus</td></tr>";
 	$Bonus .= "\n\t\t\t</table>";

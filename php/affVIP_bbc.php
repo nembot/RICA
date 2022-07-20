@@ -3,11 +3,11 @@
 function affVIP_bbc( $VIP )
 	{
 	$Sortie = "";
-	
+
 	/* Interface */
-	$Sortie .= "<div class=\"aide\">Cliquez dans la zone de texte, tappez Ctrl + A pour tout selectionner puis Ctrl + C pour copier.<br>Dans votre message de forum, tappez Ctrl + V pour coller les informations formattÈes sur les VIP</div>";
+	$Sortie .= "<div class=\"aide\">Cliquez dans la zone de texte, tappez Ctrl + A pour tout s√©lectionner puis Ctrl + C pour copier.<br>Dans votre message de forum, tapez Ctrl + V pour coller les informations formatt√©es sur les VIP</div>";
 	$Sortie .= "<textarea rows=1 cols=1 id=\"BBCode\">";
-	
+
 	/* Contenu */
 	$T = -1;
 	foreach($VIP as $N => $V)
@@ -17,9 +17,9 @@ function affVIP_bbc( $VIP )
 			$T = $V['T'];
 			$Sortie .= "\n[size=117][color=orange][b]Technologie ".$T."[/b][/color][/size]\n";
 			}
-		
+
 		$Sortie .= ":arrow: [b]".fonction("BBClan", array($N, $V['clan']))."[/b]";
-		
+
 		if (isset($V['IDe']))
 			{
 			$Sortie .= " :arrow: ".fonction("BBClan", array($V['Joueur'], $V['JClan']));
@@ -29,11 +29,11 @@ function affVIP_bbc( $VIP )
 
 		$Sortie .= "\n";
 		}
-	
-	$Sortie .= "\nGÈnÈrÈ par [url=http://rica.ovsa.fr]RICA[/url] pour le clan \"".$_SESSION['clan']."\" le ".date("d/m/Y ‡ H:i:s");
-	
+
+	$Sortie .= "\nG√©n√©r√© par [url=http://rica.ovsa.fr]RICA[/url] pour le clan \"".$_SESSION['clan']."\" le ".date("d/m/Y √† H:i:s");
+
 	$Sortie .= "</textarea>";
-	
+
 	return $Sortie;
 	}
 

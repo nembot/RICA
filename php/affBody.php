@@ -3,18 +3,18 @@
 function affBody()
 	{
 	$Body = "";
-	
-	/* Page selectionnée */
+
+	/* Page selectionnÃ©e */
 	if (isset($_GET['P']))	{ $Page = $_GET['P']; }
 	else					{ $Page = ""; }
-	
-	/* Onglets - Paramêtres */
+
+	/* Onglets - ParamÃ¨tres */
 	if (!isset($_SESSION['pseudo']))
 		{
 		$Pages = array(
 			"inscription" =>	array( "label" => "Inscription",						"lien" => TRUE	),
 			"recherche" =>		array( "label" => "Recherche",	"class" => "verrouille"				),
-			"unites" =>		array( "label" => "Unités",							"lien" => TRUE	),
+			"unites" =>		array( "label" => "UnitÃ©s",							"lien" => TRUE	),
 			"bonus" =>		array( "label" => "Bonus",							"lien" => TRUE ),
 			"vip" =>			array( "label" => "VIP",			"class" => "verrouille"				),
 			"stats" =>		array( "label" => "Statistiques",						"lien" => TRUE ),
@@ -23,7 +23,7 @@ function affBody()
 			"erreur" =>		array(														)
 			);
 
-		/* Par défaut */
+		/* Par dÃ©faut */
 		if (!isset($Pages[ $Page ]))	{ $Page = "inscription"; }
 		}
 	else
@@ -31,7 +31,7 @@ function affBody()
 		$Pages = array(
 			"inscription" =>	array( "label" => "Inscription",						"lien" => TRUE ),
 			"recherche" =>		array( "label" => "Recherche",						"lien" => TRUE ),
-			"unites" =>		array( "label" => "Unités",							"lien" => TRUE ),
+			"unites" =>		array( "label" => "UnitÃ©s",							"lien" => TRUE ),
 			"bonus" =>		array( "label" => "Bonus",							"lien" => TRUE ),
 			"vip" =>			array( "label" => "VIP",								"lien" => TRUE ),
 			"stats" =>		array( "label" => "Statistiques",						"lien" => TRUE ),
@@ -39,21 +39,21 @@ function affBody()
 			"aide" =>			array( "label" => "Aide",							"lien" => TRUE ),
 			"erreur" =>		array(														)
 			);
-		
+
 		/* Suggestions non lues */
 		$Pages['suggestions']['label'] .= " (".fonction("nonLus_total").")";
-		
-		/* Par défaut */
+
+		/* Par dÃ©faut */
 		if (!isset($Pages[ $Page ]))		{ $Page = "recherche"; }
 		}
-	
+
 	/* Onglets - Selection */
 	if (isset($Pages[ $Page ]['class']))	{ $Pages[ $Page ]['class'] .= " selection"; }
 	else								{ $Pages[ $Page ]['class'] = "selection"; }
-	
+
 	/* Onglets - Ajout */
 	$Body .= fonction("affOnglets", array($Pages, "ongletsBody"));
-	
+
 	/* Contenu */
 	switch($Page)
 		{
@@ -67,7 +67,7 @@ function affBody()
 		case "aide":		$Body .= fonction("affAide");			break;
 		case "erreur":		$Body .= fonction("affErreur");		break;
 		}
-	
+
 	return $Body;
 	}
 

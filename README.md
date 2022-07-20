@@ -95,7 +95,7 @@ sudo mysql -u root -D rica < "dumps/2022-05-04_rica.sql"
 echo "<VirtualHost *:80>
 	ServerName rica.DOMAINE.fr
 	DocumentRoot /var/www/rica
-	AddDefaultCharset ISO-8859-15
+	AddDefaultCharset UTF-8
 </VirtualHost>" | sudo tee /etc/apache2/sites-available/rica.conf
 
 # Ajout aux sites activés
