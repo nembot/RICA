@@ -62,7 +62,9 @@ echo "<!DOCTYPE HTML PUBLIC \"-//W3C//DTD HTML 4.01 Transitional//EN\" \"http://
 
 		".$Body."
 
-		<div id=\"pied\">Réalisé par <a href=\"http://www.ovsa.fr\" title=\"Site de l'auteur\" target=\"_blank\">Ziliev</a> pour <a href=\"http://www.ngswing.com\" target=\"_blank\">Star Wars in New Generation</a>, output sous licence <a href=\"http://creativecommons.org/licenses/by-nc/2.0/fr/\" target=\"_blank\">Creative Commons</a></div>
+		<div id=\"pied\">RICA a été réalisé par Ziliev. Le code est maintenu par Nem et Mythik et accessible sur <a href=\"https://github.com/nembot/RICA\" target=\"_blank\">Github</a>.
+        <br/>
+        Site hébergé chez <a href=\"https://www.ovhcloud.com/fr/\" target=\"_blank\">OVH</a>, 2 rue Kellermann, 59100 Roubaix</div>
 		
 	</body>
 </html>";
